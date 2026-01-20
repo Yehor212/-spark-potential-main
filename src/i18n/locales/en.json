@@ -11,7 +11,8 @@
     "cancel": "Cancel",
     "saving": "Saving...",
     "processing": "Processing...",
-    "amount": "Amount"
+    "amount": "Amount",
+    "all": "All"
   },
   "accounts": {
     "title": "Accounts",
@@ -289,5 +290,133 @@
     "nordigenNotConfigured": "Nordigen integration is not configured. Contact support to enable.",
     "plaidInfo": "Connect to US, UK, and EU banks through Plaid's secure banking platform.",
     "plaidNotConfigured": "Plaid integration is not configured. Contact support to enable."
+  },
+  "gamification": {
+    "achievements": "Achievements",
+    "level": "Level",
+    "xpProgress": "XP Progress",
+    "toNextLevel": "to next level",
+    "transactions": "Transactions",
+    "totalSaved": "Total Saved",
+    "dayStreak": "day streak",
+    "days": "days",
+    "longestStreak": "Best Streak",
+    "lastActive": "Last Active",
+    "startStreak": "Start your streak today!",
+    "buildingStreak": "Building momentum!",
+    "keepItUp": "Amazing streak! Keep it up!",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "secretAchievement": "Secret Achievement",
+    "secretDescription": "Keep exploring to unlock!",
+    "noUnlocked": "No achievements unlocked yet",
+    "allUnlocked": "All achievements unlocked!",
+    "levelUp": "Level Up",
+    "reachedLevel": "You reached Level {{level}}",
+    "keepGoing": "Keep tracking your finances to level up!",
+    "awesome": "Awesome!",
+    "inviteFriends": "Invite Friends",
+    "earnXPPerReferral": "Earn {{xp}} XP per referral",
+    "referred": "Referred",
+    "shareText": "Join KopiMaster with my code: {{code}}",
+    "bothGetReward": "You and your friend both get 100 XP!",
+    "levels": {
+      "beginner": "Beginner",
+      "apprentice": "Apprentice",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert",
+      "master": "Master",
+      "legend": "Legend"
+    },
+    "categories": {
+      "savings": "Savings",
+      "spending": "Spending",
+      "streak": "Streak",
+      "social": "Social",
+      "milestone": "Milestone"
+    }
+  },
+  "achievements": {
+    "first_transaction": {
+      "name": "First Step",
+      "description": "Record your first transaction"
+    },
+    "transaction_10": {
+      "name": "Getting Started",
+      "description": "Record 10 transactions"
+    },
+    "transaction_100": {
+      "name": "Dedicated Tracker",
+      "description": "Record 100 transactions"
+    },
+    "transaction_500": {
+      "name": "Finance Pro",
+      "description": "Record 500 transactions"
+    },
+    "first_goal": {
+      "name": "Goal Setter",
+      "description": "Create your first savings goal"
+    },
+    "goal_achieved": {
+      "name": "Goal Crusher",
+      "description": "Complete a savings goal"
+    },
+    "saved_1000": {
+      "name": "Saver",
+      "description": "Save $1,000 total"
+    },
+    "saved_10000": {
+      "name": "Super Saver",
+      "description": "Save $10,000 total"
+    },
+    "first_budget": {
+      "name": "Budget Beginner",
+      "description": "Create your first budget"
+    },
+    "budget_master": {
+      "name": "Budget Master",
+      "description": "Stay under budget for 3 months"
+    },
+    "streak_7": {
+      "name": "Week Warrior",
+      "description": "Maintain a 7-day streak"
+    },
+    "streak_30": {
+      "name": "Monthly Champion",
+      "description": "Maintain a 30-day streak"
+    },
+    "streak_100": {
+      "name": "Streak Legend",
+      "description": "Maintain a 100-day streak"
+    },
+    "first_referral": {
+      "name": "Friendly Invite",
+      "description": "Invite your first friend"
+    },
+    "referral_5": {
+      "name": "Social Butterfly",
+      "description": "Invite 5 friends"
+    },
+    "level_5": {
+      "name": "Rising Star",
+      "description": "Reach Level 5"
+    },
+    "level_10": {
+      "name": "Double Digits",
+      "description": "Reach Level 10"
+    },
+    "level_25": {
+      "name": "Quarter Century",
+      "description": "Reach Level 25"
+    },
+    "night_owl": {
+      "name": "Night Owl",
+      "description": "Use the app between midnight and 4 AM"
+    },
+    "early_bird": {
+      "name": "Early Bird",
+      "description": "Use the app between 5 AM and 7 AM"
+    }
   }
 }

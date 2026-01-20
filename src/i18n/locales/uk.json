@@ -11,7 +11,8 @@
     "cancel": "Скасувати",
     "saving": "Збереження...",
     "processing": "Обробка...",
-    "amount": "Сума"
+    "amount": "Сума",
+    "all": "Всі"
   },
   "accounts": {
     "title": "Рахунки",
@@ -289,5 +290,133 @@
     "nordigenNotConfigured": "Інтеграція з Nordigen не налаштована. Зверніться до підтримки.",
     "plaidInfo": "Підключіться до банків США, Великобританії та ЄС через безпечну платформу Plaid.",
     "plaidNotConfigured": "Інтеграція з Plaid не налаштована. Зверніться до підтримки."
+  },
+  "gamification": {
+    "achievements": "Досягнення",
+    "level": "Рівень",
+    "xpProgress": "Прогрес XP",
+    "toNextLevel": "до наступного рівня",
+    "transactions": "Транзакцій",
+    "totalSaved": "Всього заощаджено",
+    "dayStreak": "днів поспіль",
+    "days": "днів",
+    "longestStreak": "Найкраща серія",
+    "lastActive": "Остання активність",
+    "startStreak": "Почніть свою серію сьогодні!",
+    "buildingStreak": "Набираєте обертів!",
+    "keepItUp": "Чудова серія! Так тримати!",
+    "unlocked": "Відкрито",
+    "locked": "Закрито",
+    "secretAchievement": "Секретне досягнення",
+    "secretDescription": "Продовжуйте досліджувати!",
+    "noUnlocked": "Досягнень поки немає",
+    "allUnlocked": "Всі досягнення відкрито!",
+    "levelUp": "Новий рівень",
+    "reachedLevel": "Ви досягли {{level}} рівня",
+    "keepGoing": "Продовжуйте відстежувати фінанси!",
+    "awesome": "Чудово!",
+    "inviteFriends": "Запросити друзів",
+    "earnXPPerReferral": "Отримуйте {{xp}} XP за кожного",
+    "referred": "Запрошено",
+    "shareText": "Приєднуйся до KopiMaster з моїм кодом: {{code}}",
+    "bothGetReward": "Ви і ваш друг отримаєте по 100 XP!",
+    "levels": {
+      "beginner": "Початківець",
+      "apprentice": "Учень",
+      "intermediate": "Середній",
+      "advanced": "Досвідчений",
+      "expert": "Експерт",
+      "master": "Майстер",
+      "legend": "Легенда"
+    },
+    "categories": {
+      "savings": "Заощадження",
+      "spending": "Витрати",
+      "streak": "Серія",
+      "social": "Соціальні",
+      "milestone": "Віхи"
+    }
+  },
+  "achievements": {
+    "first_transaction": {
+      "name": "Перший крок",
+      "description": "Додайте першу транзакцію"
+    },
+    "transaction_10": {
+      "name": "Початок",
+      "description": "Додайте 10 транзакцій"
+    },
+    "transaction_100": {
+      "name": "Старанний трекер",
+      "description": "Додайте 100 транзакцій"
+    },
+    "transaction_500": {
+      "name": "Фінансовий про",
+      "description": "Додайте 500 транзакцій"
+    },
+    "first_goal": {
+      "name": "Цілеспрямований",
+      "description": "Створіть першу ціль накопичення"
+    },
+    "goal_achieved": {
+      "name": "Ціль досягнута",
+      "description": "Досягніть цілі накопичення"
+    },
+    "saved_1000": {
+      "name": "Ощадливий",
+      "description": "Заощадьте $1,000"
+    },
+    "saved_10000": {
+      "name": "Супер ощадливий",
+      "description": "Заощадьте $10,000"
+    },
+    "first_budget": {
+      "name": "Початок бюджету",
+      "description": "Створіть перший бюджет"
+    },
+    "budget_master": {
+      "name": "Майстер бюджету",
+      "description": "Не перевищуйте бюджет 3 місяці"
+    },
+    "streak_7": {
+      "name": "Тижневий воїн",
+      "description": "Підтримуйте серію 7 днів"
+    },
+    "streak_30": {
+      "name": "Місячний чемпіон",
+      "description": "Підтримуйте серію 30 днів"
+    },
+    "streak_100": {
+      "name": "Легенда серій",
+      "description": "Підтримуйте серію 100 днів"
+    },
+    "first_referral": {
+      "name": "Дружнє запрошення",
+      "description": "Запросіть першого друга"
+    },
+    "referral_5": {
+      "name": "Соціальний метелик",
+      "description": "Запросіть 5 друзів"
+    },
+    "level_5": {
+      "name": "Зірка, що сходить",
+      "description": "Досягніть 5 рівня"
+    },
+    "level_10": {
+      "name": "Подвійні цифри",
+      "description": "Досягніть 10 рівня"
+    },
+    "level_25": {
+      "name": "Чверть століття",
+      "description": "Досягніть 25 рівня"
+    },
+    "night_owl": {
+      "name": "Нічна сова",
+      "description": "Використовуйте додаток між 00:00 та 04:00"
+    },
+    "early_bird": {
+      "name": "Рання пташка",
+      "description": "Використовуйте додаток між 05:00 та 07:00"
+    }
   }
 }
