@@ -138,7 +138,17 @@
     "title": "Налаштування",
     "language": "Мова",
     "theme": "Тема",
+    "currency": "Валюта",
+    "searchCurrency": "Пошук валюти...",
+    "popular": "Популярні",
+    "allCurrencies": "Всі валюти",
+    "noCurrencyFound": "Валюту не знайдено",
     "logout": "Вийти"
+  },
+  "ads": {
+    "sponsored": "Спонсоровано",
+    "ad": "Реклама",
+    "supportUs": "Підтримайте нас"
   },
   "auth": {
     "signIn": "Увійти",

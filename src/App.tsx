@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { AdsProvider } from "@/contexts/AdsContext";
+import { CurrencyProvider } from "@/contexts/CurrencyContext";
 import { LoginPage } from "@/components/auth/LoginPage";
 import { InstallPrompt, OfflineIndicator, UpdatePrompt } from "@/components/pwa";
 import Index from "./pages/Index";
@@ -52,8 +53,9 @@ function AppRoutes() {
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <AuthProvider>
-      <AdsProvider>
-        <TooltipProvider>
+      <CurrencyProvider>
+        <AdsProvider>
+          <TooltipProvider>
           <Toaster />
           <Sonner />
           <BrowserRouter basename={(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}>
@@ -62,8 +64,9 @@ const App = () => (
           <InstallPrompt />
           <OfflineIndicator />
           <UpdatePrompt />
-        </TooltipProvider>
-      </AdsProvider>
+          </TooltipProvider>
+        </AdsProvider>
+      </CurrencyProvider>
     </AuthProvider>
   </QueryClientProvider>
 );

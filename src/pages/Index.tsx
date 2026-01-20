@@ -19,6 +19,8 @@ import { QuickActions } from '@/components/QuickActions';
 import { TransactionList } from '@/components/TransactionList';
 import { SavingsGoalCard } from '@/components/SavingsGoalCard';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { CurrencySelector } from '@/components/CurrencySelector';
 import { UserMenu } from '@/components/auth/UserMenu';
 
 // Modals
@@ -174,14 +176,16 @@ const Index = () => {
               {t('app.greeting')}
             </h1>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2">
             {/* Compact gamification indicators */}
             {stats && (
-              <div className="hidden sm:flex items-center gap-2 mr-2">
+              <div className="hidden sm:flex items-center gap-2 mr-1">
                 <UserLevel compact />
                 <StreakIndicator compact showCard={false} />
               </div>
             )}
+            <ThemeToggle />
+            <CurrencySelector compact />
             <LanguageSwitcher />
             {isConfigured && user ? (
               <UserMenu />
