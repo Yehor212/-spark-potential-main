@@ -60,24 +60,27 @@ Transform KopiMaster into a full-featured personal finance platform with bank in
 
 ---
 
-### Phase 2: PWA & Offline 🔜 NEXT
+### Phase 2: PWA & Offline ✅ COMPLETED
 
-**Files to create:**
-- `vite.config.ts` - Add vite-plugin-pwa
-- `public/manifest.json` - PWA manifest
-- `src/services/sync/SyncManager.ts` - Offline sync
-- `src/components/pwa/` - Install prompt, offline indicator
+**Files created:**
+- `vite.config.ts` - Configured vite-plugin-pwa with Workbox
+- `public/favicon.svg` - PWA icon source
+- `src/services/sync/SyncManager.ts` - Offline sync service
+- `src/components/pwa/InstallPrompt.tsx` - Smart install banner
+- `src/components/pwa/OfflineIndicator.tsx` - Sync status indicator
+- `src/components/pwa/UpdatePrompt.tsx` - Update notification
+- `src/hooks/usePWA.ts` - PWA registration hook
 
-**Features:**
-- [ ] Service Worker (Workbox)
-- [ ] Install prompt
-- [ ] Offline indicator
-- [ ] Background sync
-- [ ] Push notifications
+**Features completed:**
+- [x] Service Worker (Workbox) - auto-update, precaching
+- [x] Install prompt with dismiss/remember
+- [x] Offline indicator with sync status
+- [x] Background sync with SyncManager
+- [x] Runtime caching for Supabase API
 
 ---
 
-### Phase 3: Bank Integrations
+### Phase 3: Bank Integrations 🔜 NEXT
 
 **Files to create:**
 - `src/services/banking/MonobankProvider.ts`
@@ -273,8 +276,8 @@ User Action → Zustand Store → IndexedDB (immediate)
 | Phase | Status | Description |
 |-------|--------|-------------|
 | Phase 1 | ✅ Done | Foundation - Accounts, Stores, IndexedDB |
-| Phase 2 | 🔜 Next | PWA & Offline |
-| Phase 3 | 📋 Todo | Bank Integrations |
+| Phase 2 | ✅ Done | PWA & Offline |
+| Phase 3 | 🔜 Next | Bank Integrations |
 | Phase 4 | 📋 Todo | Budgets & Recurring |
 | Phase 5 | 📋 Todo | Analytics & Charts |
 | Phase 6 | 📋 Todo | Gamification & Social |
