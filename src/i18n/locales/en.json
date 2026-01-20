@@ -3,6 +3,20 @@
     "name": "KopiMaster",
     "greeting": "Hello! 👋"
   },
+  "nav": {
+    "home": "Home",
+    "budgets": "Budgets",
+    "recurring": "Recurring",
+    "analytics": "Analytics",
+    "achievements": "Achievements"
+  },
+  "fab": {
+    "addIncome": "Add Income",
+    "addExpense": "Add Expense",
+    "addGoal": "Add Goal",
+    "addBudget": "Add Budget",
+    "addRecurring": "Add Recurring"
+  },
   "common": {
     "add": "Add",
     "edit": "Edit",
@@ -217,7 +231,12 @@
     "income": "Income",
     "expense": "Expense",
     "type": "Type",
-    "processedCount": "{{count}} transactions auto-created"
+    "processedCount": "{{count}} transactions auto-created",
+    "activeCount": "{{count}} active",
+    "remindersCount": "{{count}} reminders",
+    "all": "All recurring",
+    "dueTomorrow": "Due tomorrow",
+    "daysUntil": "Due in {{count}} days"
   },
   "analytics": {
     "title": "Analytics",
