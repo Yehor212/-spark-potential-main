@@ -8,6 +8,7 @@ import type {
   UserAchievement,
   UserStats,
   SyncQueueItem,
+  BankConnection,
 } from '@/types/finance';
 
 export class KopiMasterDB extends Dexie {
@@ -19,6 +20,7 @@ export class KopiMasterDB extends Dexie {
   userAchievements!: Table<UserAchievement>;
   userStats!: Table<UserStats>;
   syncQueue!: Table<SyncQueueItem>;
+  bankConnections!: Table<BankConnection>;
 
   constructor() {
     super('kopimaster');
@@ -32,6 +34,19 @@ export class KopiMasterDB extends Dexie {
       userAchievements: 'id, [userId+achievementId]',
       userStats: 'userId',
       syncQueue: 'id, userId, synced, tableName',
+    });
+
+    // Version 2: Add bank connections
+    this.version(2).stores({
+      transactions: 'id, userId, type, category, date, accountId, isSynced, bankTransactionId',
+      accounts: 'id, userId, type, isDefault, bankConnectionId',
+      savingsGoals: 'id, userId',
+      budgets: 'id, userId, category',
+      recurringTransactions: 'id, userId, nextOccurrence, isActive',
+      userAchievements: 'id, [userId+achievementId]',
+      userStats: 'userId',
+      syncQueue: 'id, userId, synced, tableName',
+      bankConnections: 'id, userId, provider, status',
     });
   }
 }
@@ -47,6 +62,11 @@ export async function clearAllData() {
   await db.userAchievements.clear();
   await db.userStats.clear();
   await db.syncQueue.clear();
+  await db.bankConnections.clear();
+}
+
+export async function getUserBankConnections(userId: string): Promise<BankConnection[]> {
+  return db.bankConnections.where('userId').equals(userId).toArray();
 }
 
 export async function getUnsyncedItems(): Promise<SyncQueueItem[]> {

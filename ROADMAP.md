@@ -80,22 +80,31 @@ Transform KopiMaster into a full-featured personal finance platform with bank in
 
 ---
 
-### Phase 3: Bank Integrations 🔜 NEXT
+### Phase 3: Bank Integrations ✅ COMPLETED
 
-**Files to create:**
-- `src/services/banking/MonobankProvider.ts`
-- `src/services/banking/PlaidProvider.ts`
-- `src/services/banking/NordigenProvider.ts`
-- `src/services/banking/mccMapping.ts`
-- `src/components/banking/` - Connection UI
-- `supabase/functions/bank-sync/` - Edge function
+**Files created:**
+- `src/services/banking/types.ts` - Bank provider interfaces and types
+- `src/services/banking/mccMapping.ts` - MCC code to category mapping
+- `src/services/banking/MonobankProvider.ts` - Ukraine, free, token-based
+- `src/services/banking/NordigenProvider.ts` - EU, free tier via PSD2
+- `src/services/banking/PlaidProvider.ts` - US/EU, paid, OAuth
+- `src/services/banking/BankingService.ts` - Unified banking orchestrator
+- `src/stores/useBankConnectionsStore.ts` - Bank connections state
+- `src/components/banking/BankConnectionCard.tsx` - Connection display
+- `src/components/banking/BankConnectionsList.tsx` - Connections list
+- `src/components/banking/ConnectBankModal.tsx` - Connect bank UI
+- `src/components/banking/SyncStatus.tsx` - Sync status display
 
-**Features:**
-- [ ] Monobank API (Ukraine) - free, token-based
-- [ ] Plaid (US/EU) - OAuth, paid
-- [ ] Nordigen (EU) - OAuth, free tier
-- [ ] Auto-categorization by MCC codes
-- [ ] Transaction reconciliation
+**Features completed:**
+- [x] Monobank API (Ukraine) - free, token-based
+- [x] Plaid (US/EU) - OAuth flow support
+- [x] Nordigen (EU) - OAuth, free tier via PSD2
+- [x] Auto-categorization by MCC codes (200+ codes)
+- [x] Smart fallback to description-based categorization
+- [x] Transaction reconciliation (deduplication)
+- [x] Multi-language support (UK/EN)
+- [x] Rate limiting for Monobank (1 req/min)
+- [x] Error handling with typed errors
 
 ---
 
@@ -175,10 +184,10 @@ src/components/
 │   ├── AccountSwitcher.tsx
 │   ├── AddAccountModal.tsx
 │   └── TransferModal.tsx
-├── banking/           📋 TODO
+├── banking/           ✅ DONE
+│   ├── BankConnectionCard.tsx
+│   ├── BankConnectionsList.tsx
 │   ├── ConnectBankModal.tsx
-│   ├── MonobankConnect.tsx
-│   ├── PlaidConnect.tsx
 │   └── SyncStatus.tsx
 ├── budgets/           📋 TODO
 │   ├── BudgetOverview.tsx
@@ -192,10 +201,10 @@ src/components/
 │   ├── UserLevel.tsx
 │   ├── AchievementCard.tsx
 │   └── StreakIndicator.tsx
-├── pwa/               📋 TODO
+├── pwa/               ✅ DONE
 │   ├── InstallPrompt.tsx
 │   ├── OfflineIndicator.tsx
-│   └── SyncProgress.tsx
+│   └── UpdatePrompt.tsx
 └── cta/               📋 TODO
     └── FloatingActionButton.tsx
 ```
@@ -206,13 +215,14 @@ src/components/
 
 ```
 src/stores/
-├── useAccountsStore.ts      ✅ Multiple accounts
-├── useTransactionsStore.ts  ✅ Transactions + sync
-├── useBudgetsStore.ts       ✅ Budget management
-├── useGoalsStore.ts         ✅ Savings goals
-├── useGamificationStore.ts  ✅ XP, levels, achievements
-├── useSyncStore.ts          ✅ Offline sync queue
-└── index.ts                 ✅ Combined exports
+├── useAccountsStore.ts        ✅ Multiple accounts
+├── useTransactionsStore.ts    ✅ Transactions + sync
+├── useBudgetsStore.ts         ✅ Budget management
+├── useGoalsStore.ts           ✅ Savings goals
+├── useGamificationStore.ts    ✅ XP, levels, achievements
+├── useSyncStore.ts            ✅ Offline sync queue
+├── useBankConnectionsStore.ts ✅ Bank integrations
+└── index.ts                   ✅ Combined exports
 ```
 
 ---
@@ -277,8 +287,8 @@ User Action → Zustand Store → IndexedDB (immediate)
 |-------|--------|-------------|
 | Phase 1 | ✅ Done | Foundation - Accounts, Stores, IndexedDB |
 | Phase 2 | ✅ Done | PWA & Offline |
-| Phase 3 | 🔜 Next | Bank Integrations |
-| Phase 4 | 📋 Todo | Budgets & Recurring |
+| Phase 3 | ✅ Done | Bank Integrations (Monobank, Nordigen, Plaid) |
+| Phase 4 | 🔜 Next | Budgets & Recurring |
 | Phase 5 | 📋 Todo | Analytics & Charts |
 | Phase 6 | 📋 Todo | Gamification & Social |
 | Phase 7 | 📋 Todo | CTA & Polish |
