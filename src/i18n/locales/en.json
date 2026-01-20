@@ -3,6 +3,46 @@
     "name": "KopiMaster",
     "greeting": "Hello! 👋"
   },
+  "common": {
+    "add": "Add",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "processing": "Processing...",
+    "amount": "Amount"
+  },
+  "accounts": {
+    "title": "Accounts",
+    "add": "Add Account",
+    "edit": "Edit Account",
+    "addFirst": "Add Your First Account",
+    "empty": "No accounts yet",
+    "emptyDescription": "Add an account to start tracking your finances",
+    "name": "Account Name",
+    "namePlaceholder": "E.g.: Main Card",
+    "type": "Account Type",
+    "currency": "Currency",
+    "balance": "Balance",
+    "totalBalance": "Total Balance",
+    "initialBalance": "Initial Balance",
+    "transfer": "Transfer",
+    "transferFrom": "From Account",
+    "transferTo": "To Account",
+    "selectAccount": "Select account",
+    "available": "Available",
+    "allAccounts": "All Accounts",
+    "setDefault": "Set as Default",
+    "confirmDelete": "Are you sure you want to delete this account?",
+    "types": {
+      "checking": "Checking",
+      "savings": "Savings",
+      "credit": "Credit Card",
+      "investment": "Investment",
+      "cash": "Cash"
+    }
+  },
   "balance": {
     "title": "Total Balance",
     "income": "Income",
