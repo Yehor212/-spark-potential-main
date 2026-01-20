@@ -28,6 +28,7 @@ import { AddTransactionModal } from '@/components/AddTransactionModal';
 import { AddGoalModal } from '@/components/AddGoalModal';
 import { AddFundsModal } from '@/components/AddFundsModal';
 import { StatsModal } from '@/components/StatsModal';
+import { ConnectBankModal } from '@/components/banking';
 
 // Feature sections
 import { BudgetOverview } from '@/components/budgets';
@@ -85,6 +86,7 @@ const Index = () => {
     isOpen: boolean;
     goal: SavingsGoal | null;
   }>({ isOpen: false, goal: null });
+  const [bankModalOpen, setBankModalOpen] = useState(false);
 
   // Computed values
   const balance = getBalance();
@@ -239,6 +241,7 @@ const Index = () => {
               onAddExpense={() => setTransactionModal({ isOpen: true, type: 'expense' })}
               onAddGoal={() => setGoalModalOpen(true)}
               onViewStats={() => setStatsModalOpen(true)}
+              onConnectBank={() => setBankModalOpen(true)}
               onExport={() => {
                 if (transactions.length === 0) {
                   toast.error(t('toast.exportError'));
@@ -355,6 +358,11 @@ const Index = () => {
         expensesByCategory={expensesByCategory}
         monthlyIncome={monthlyIncome}
         monthlyExpense={monthlyExpense}
+      />
+
+      <ConnectBankModal
+        isOpen={bankModalOpen}
+        onClose={() => setBankModalOpen(false)}
       />
 
       {/* Level Up Modal (gamification) */}

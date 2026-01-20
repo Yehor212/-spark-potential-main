@@ -67,6 +67,7 @@
     "income": "Income",
     "expense": "Expense",
     "goal": "Goal",
+    "bank": "Bank",
     "stats": "Stats",
     "export": "Export"
   },

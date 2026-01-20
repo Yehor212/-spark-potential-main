@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Plus, Minus, Target, PieChart, Download } from 'lucide-react';
+import { Plus, Minus, Target, PieChart, Download, Wallet } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 
@@ -9,17 +9,18 @@ interface QuickActionsProps {
   onAddGoal: () => void;
   onViewStats: () => void;
   onExport: () => void;
+  onConnectBank?: () => void;
 }
 
-export function QuickActions({ onAddIncome, onAddExpense, onAddGoal, onViewStats, onExport }: QuickActionsProps) {
+export function QuickActions({ onAddIncome, onAddExpense, onAddGoal, onViewStats, onExport, onConnectBank }: QuickActionsProps) {
   const { t } = useTranslation();
 
   const actions = [
     { icon: Plus, labelKey: 'actions.income', onClick: onAddIncome, gradient: 'gradient-income' },
     { icon: Minus, labelKey: 'actions.expense', onClick: onAddExpense, gradient: 'gradient-expense' },
     { icon: Target, labelKey: 'actions.goal', onClick: onAddGoal, gradient: 'gradient-savings' },
+    { icon: Wallet, labelKey: 'actions.bank', onClick: onConnectBank, gradient: 'gradient-bank' },
     { icon: PieChart, labelKey: 'actions.stats', onClick: onViewStats, gradient: 'gradient-accent' },
-    { icon: Download, labelKey: 'actions.export', onClick: onExport, gradient: 'gradient-primary' },
   ];
 
   return (

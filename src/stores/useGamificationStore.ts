@@ -220,107 +220,137 @@ export const useGamificationStore = create<GamificationState>()(
         set({ isLoading: true, error: null });
 
         try {
-          // Load achievements definitions
+          // Try to load from local first for instant UI
+          const localStats = await db.userStats.get(userId);
+          if (localStats) {
+            set({ stats: localStats });
+          }
+
+          const localAchievements = await db.userAchievements
+            .where('userId')
+            .equals(userId)
+            .toArray();
+          if (localAchievements.length > 0) {
+            set({ userAchievements: localAchievements });
+          }
+
+          // Load from Supabase if configured
           if (isSupabaseConfigured()) {
-            const { data: achievementsData } = await supabase
-              .from('achievements')
-              .select('*');
+            // Load achievements definitions (graceful error handling)
+            try {
+              const { data: achievementsData, error: achievementsError } = await supabase
+                .from('achievements')
+                .select('*');
 
-            if (achievementsData) {
-              const achievements: Achievement[] = achievementsData.map((a) => ({
-                id: a.id,
-                nameKey: a.name_key,
-                descriptionKey: a.description_key,
-                icon: a.icon,
-                category: a.category,
-                xpReward: a.xp_reward,
-                requirementType: a.requirement_type,
-                requirementValue: a.requirement_value,
-                isSecret: a.is_secret,
-              }));
-              set({ achievements });
+              if (!achievementsError && achievementsData) {
+                const achievements: Achievement[] = achievementsData.map((a) => ({
+                  id: a.id,
+                  nameKey: a.name_key,
+                  descriptionKey: a.description_key,
+                  icon: a.icon,
+                  category: a.category,
+                  xpReward: a.xp_reward,
+                  requirementType: a.requirement_type,
+                  requirementValue: a.requirement_value,
+                  isSecret: a.is_secret,
+                }));
+                set({ achievements });
+              }
+            } catch {
+              // Table doesn't exist or other error - use local/default achievements
+              console.debug('Achievements table not available');
             }
 
-            // Load user stats
-            const { data: statsData } = await supabase
-              .from('user_stats')
-              .select('*')
-              .eq('user_id', userId)
-              .single();
+            // Load user stats (graceful error handling for missing table)
+            try {
+              const { data: statsData, error: statsError } = await supabase
+                .from('user_stats')
+                .select('*')
+                .eq('user_id', userId)
+                .single();
 
-            if (statsData) {
-              const stats: UserStats = {
-                userId: statsData.user_id,
-                xp: statsData.xp,
-                level: statsData.level,
-                currentStreak: statsData.current_streak,
-                longestStreak: statsData.longest_streak,
-                lastActivityDate: statsData.last_activity_date,
-                totalTransactions: statsData.total_transactions,
-                totalSaved: parseFloat(statsData.total_saved || '0'),
-                createdAt: statsData.created_at,
-                updatedAt: statsData.updated_at,
-              };
-              set({ stats });
-              await db.userStats.put(stats);
-            } else {
-              // Initialize new user stats
-              const newStats: UserStats = { ...DEFAULT_STATS, userId };
-              set({ stats: newStats });
-              await db.userStats.put(newStats);
+              if (!statsError && statsData) {
+                const stats: UserStats = {
+                  userId: statsData.user_id,
+                  xp: statsData.xp,
+                  level: statsData.level,
+                  currentStreak: statsData.current_streak,
+                  longestStreak: statsData.longest_streak,
+                  lastActivityDate: statsData.last_activity_date,
+                  totalTransactions: statsData.total_transactions,
+                  totalSaved: parseFloat(statsData.total_saved || '0'),
+                  createdAt: statsData.created_at,
+                  updatedAt: statsData.updated_at,
+                };
+                set({ stats });
+                await db.userStats.put(stats);
+              } else if (statsError?.code === 'PGRST116' || statsError?.code === '406' || !localStats) {
+                // No row found or table doesn't exist - initialize new user stats
+                const newStats: UserStats = { ...DEFAULT_STATS, userId };
+                set({ stats: newStats });
+                await db.userStats.put(newStats);
+              }
+            } catch {
+              // Table doesn't exist - use local stats
+              console.debug('User stats table not available');
+              if (!localStats) {
+                const newStats: UserStats = { ...DEFAULT_STATS, userId };
+                set({ stats: newStats });
+                await db.userStats.put(newStats);
+              }
             }
 
-            // Load user achievements
-            const { data: userAchievementsData } = await supabase
-              .from('user_achievements')
-              .select('*, achievements(*)')
-              .eq('user_id', userId);
+            // Load user achievements (graceful error handling)
+            try {
+              const { data: userAchievementsData, error: uaError } = await supabase
+                .from('user_achievements')
+                .select('*, achievements(*)')
+                .eq('user_id', userId);
 
-            if (userAchievementsData) {
-              const userAchievements: UserAchievement[] = userAchievementsData.map((ua) => ({
-                id: ua.id,
-                userId: ua.user_id,
-                achievementId: ua.achievement_id,
-                unlockedAt: ua.unlocked_at,
-                progress: ua.progress,
-                achievement: ua.achievements
-                  ? {
-                      id: ua.achievements.id,
-                      nameKey: ua.achievements.name_key,
-                      descriptionKey: ua.achievements.description_key,
-                      icon: ua.achievements.icon,
-                      category: ua.achievements.category,
-                      xpReward: ua.achievements.xp_reward,
-                      requirementType: ua.achievements.requirement_type,
-                      requirementValue: ua.achievements.requirement_value,
-                      isSecret: ua.achievements.is_secret,
-                    }
-                  : undefined,
-              }));
-              set({ userAchievements });
-              await db.userAchievements.bulkPut(userAchievements);
+              if (!uaError && userAchievementsData) {
+                const userAchievements: UserAchievement[] = userAchievementsData.map((ua) => ({
+                  id: ua.id,
+                  userId: ua.user_id,
+                  achievementId: ua.achievement_id,
+                  unlockedAt: ua.unlocked_at,
+                  progress: ua.progress,
+                  achievement: ua.achievements
+                    ? {
+                        id: ua.achievements.id,
+                        nameKey: ua.achievements.name_key,
+                        descriptionKey: ua.achievements.description_key,
+                        icon: ua.achievements.icon,
+                        category: ua.achievements.category,
+                        xpReward: ua.achievements.xp_reward,
+                        requirementType: ua.achievements.requirement_type,
+                        requirementValue: ua.achievements.requirement_value,
+                        isSecret: ua.achievements.is_secret,
+                      }
+                    : undefined,
+                }));
+                set({ userAchievements });
+                await db.userAchievements.bulkPut(userAchievements);
+              }
+            } catch {
+              // Table doesn't exist - use local achievements
+              console.debug('User achievements table not available');
             }
           } else {
-            // Fallback to local data
-            const localStats = await db.userStats.get(userId);
-            if (localStats) {
-              set({ stats: localStats });
-            } else {
+            // No Supabase - ensure local stats exist
+            if (!localStats) {
               const newStats: UserStats = { ...DEFAULT_STATS, userId };
               set({ stats: newStats });
               await db.userStats.put(newStats);
             }
-
-            const localAchievements = await db.userAchievements
-              .where('userId')
-              .equals(userId)
-              .toArray();
-            set({ userAchievements: localAchievements });
           }
 
           set({ isLoading: false });
         } catch (error) {
-          set({ error: (error as Error).message, isLoading: false });
+          console.error('Failed to load gamification data:', error);
+          // Still initialize local stats on error
+          const newStats: UserStats = { ...DEFAULT_STATS, userId };
+          set({ stats: newStats, error: null, isLoading: false });
+          await db.userStats.put(newStats);
         }
       },
 
