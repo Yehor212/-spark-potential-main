@@ -178,7 +178,11 @@
     "resume": "Відновити бюджет",
     "paused": "Призупинено",
     "active": "Активний",
-    "categoryExists": "Бюджет для цієї категорії вже існує"
+    "categoryExists": "Бюджет для цієї категорії вже існує",
+    "totalBudgeted": "Загальний бюджет",
+    "totalSpent": "Загальні витрати",
+    "exceededCount": "{{count}} бюджет(ів) перевищено",
+    "warningCount": "{{count}} бюджет(ів) на рівні попередження"
   },
   "recurring": {
     "title": "Регулярні операції",
@@ -213,6 +217,39 @@
     "expense": "Витрата",
     "type": "Тип",
     "processedCount": "{{count}} операцій створено автоматично"
+  },
+  "analytics": {
+    "title": "Аналітика",
+    "monthlyTrends": "Місячні тренди",
+    "budgetComparison": "Бюджет vs Фактичні",
+    "income": "Дохід",
+    "expense": "Витрати",
+    "balance": "Баланс",
+    "budgeted": "Заплановано",
+    "spent": "Витрачено",
+    "usage": "Використання",
+    "monthlyIncome": "Місячний дохід",
+    "monthlyExpense": "Місячні витрати",
+    "monthlySavings": "Місячні заощадження",
+    "budgetUsage": "Використання бюджету",
+    "savingsRate": "Рівень заощаджень",
+    "goalsProgress": "Прогрес цілей",
+    "financialStats": "Фінансова статистика",
+    "last30Days": "Останні 30 днів",
+    "level": "Рівень",
+    "dayStreak": "дн серія",
+    "generatedAt": "Згенеровано",
+    "poweredBy": "Працює на",
+    "notFound": "Статистику не знайдено",
+    "noData": "Немає даних",
+    "noDataDescription": "Додайте транзакції, щоб побачити аналітику",
+    "periods": {
+      "1m": "1 Місяць",
+      "3m": "3 Місяці",
+      "6m": "6 Місяців",
+      "12m": "1 Рік",
+      "all": "Весь час"
+    }
   },
   "banking": {
     "title": "Підключення банків",

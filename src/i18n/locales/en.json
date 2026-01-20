@@ -178,7 +178,11 @@
     "resume": "Resume Budget",
     "paused": "Paused",
     "active": "Active",
-    "categoryExists": "Budget for this category already exists"
+    "categoryExists": "Budget for this category already exists",
+    "totalBudgeted": "Total Budgeted",
+    "totalSpent": "Total Spent",
+    "exceededCount": "{{count}} budget(s) exceeded",
+    "warningCount": "{{count}} budget(s) at warning level"
   },
   "recurring": {
     "title": "Recurring Transactions",
@@ -213,6 +217,39 @@
     "expense": "Expense",
     "type": "Type",
     "processedCount": "{{count}} transactions auto-created"
+  },
+  "analytics": {
+    "title": "Analytics",
+    "monthlyTrends": "Monthly Trends",
+    "budgetComparison": "Budget vs Actual",
+    "income": "Income",
+    "expense": "Expenses",
+    "balance": "Balance",
+    "budgeted": "Budgeted",
+    "spent": "Spent",
+    "usage": "Usage",
+    "monthlyIncome": "Monthly Income",
+    "monthlyExpense": "Monthly Expenses",
+    "monthlySavings": "Monthly Savings",
+    "budgetUsage": "Budget Usage",
+    "savingsRate": "Savings Rate",
+    "goalsProgress": "Goals Progress",
+    "financialStats": "Financial Stats",
+    "last30Days": "Last 30 days",
+    "level": "Level",
+    "dayStreak": "day streak",
+    "generatedAt": "Generated on",
+    "poweredBy": "Powered by",
+    "notFound": "Stats not found",
+    "noData": "No data available",
+    "noDataDescription": "Add transactions to see your analytics",
+    "periods": {
+      "1m": "1 Month",
+      "3m": "3 Months",
+      "6m": "6 Months",
+      "12m": "1 Year",
+      "all": "All Time"
+    }
   },
   "banking": {
     "title": "Bank Connections",

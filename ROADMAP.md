@@ -133,19 +133,25 @@ Transform KopiMaster into a full-featured personal finance platform with bank in
 
 ---
 
-### Phase 5: Analytics & Charts
+### Phase 5: Analytics & Charts ✅ COMPLETED
 
-**Files to create:**
-- `src/components/analytics/`
-- `src/pages/Analytics.tsx`
-- `src/pages/stats/[userId].tsx` - Shareable stats
+**Files created:**
+- `src/components/analytics/ExpensesPieChart.tsx` - Pie chart for category breakdown
+- `src/components/analytics/MonthlyTrendsChart.tsx` - Line chart for trends
+- `src/components/analytics/BudgetComparisonChart.tsx` - Bar chart budget vs actual
+- `src/components/analytics/AnalyticsOverview.tsx` - Main analytics dashboard
+- `src/components/analytics/ShareableStats.tsx` - Public shareable stats page
+- `src/services/analytics/exportPDF.ts` - PDF export service
 
-**Features:**
-- [ ] Pie chart (expenses by category)
-- [ ] Line chart (monthly trends)
-- [ ] Budget vs actual comparison
-- [ ] Shareable public stats page
-- [ ] Export to PDF
+**Features completed:**
+- [x] Pie chart (expenses by category with tooltips)
+- [x] Line chart (6-month income/expense trends)
+- [x] Budget vs actual comparison (horizontal bar chart)
+- [x] Shareable public stats page with gamification data
+- [x] Export to PDF (print-friendly HTML report)
+- [x] Period selector (1m, 3m, 6m, 12m, all)
+- [x] Summary cards (income, expense, savings, budget usage)
+- [x] i18n translations for EN/UK
 
 ---
 
@@ -205,9 +211,11 @@ src/components/
 │   ├── RecurringList.tsx
 │   ├── RecurringCard.tsx
 │   └── AddRecurringModal.tsx
-├── analytics/         📋 TODO
+├── analytics/         ✅ DONE
 │   ├── ExpensesPieChart.tsx
 │   ├── MonthlyTrendsChart.tsx
+│   ├── BudgetComparisonChart.tsx
+│   ├── AnalyticsOverview.tsx
 │   └── ShareableStats.tsx
 ├── gamification/      📋 TODO
 │   ├── UserLevel.tsx
@@ -302,6 +310,6 @@ User Action → Zustand Store → IndexedDB (immediate)
 | Phase 2 | ✅ Done | PWA & Offline |
 | Phase 3 | ✅ Done | Bank Integrations (Monobank, Nordigen, Plaid) |
 | Phase 4 | ✅ Done | Budgets & Recurring |
-| Phase 5 | 🔜 Next | Analytics & Charts |
-| Phase 6 | 📋 Todo | Gamification & Social |
+| Phase 5 | ✅ Done | Analytics & Charts |
+| Phase 6 | 🔜 Next | Gamification & Social |
 | Phase 7 | 📋 Todo | CTA & Polish |
