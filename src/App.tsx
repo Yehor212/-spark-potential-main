@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { AdsProvider } from "@/contexts/AdsContext";
 import { LoginPage } from "@/components/auth/LoginPage";
+import { InstallPrompt, OfflineIndicator, UpdatePrompt } from "@/components/pwa";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -58,6 +59,9 @@ const App = () => (
           <BrowserRouter basename={(import.meta.env.BASE_URL || '/').replace(/\/$/, '')}>
             <AppRoutes />
           </BrowserRouter>
+          <InstallPrompt />
+          <OfflineIndicator />
+          <UpdatePrompt />
         </TooltipProvider>
       </AdsProvider>
     </AuthProvider>
