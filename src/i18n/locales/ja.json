@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "コピマスター",
+    "greeting": "こんにちは！👋"
+  },
+  "balance": {
+    "title": "総残高",
+    "income": "収入",
+    "expense": "支出"
+  },
+  "actions": {
+    "income": "収入",
+    "expense": "支出",
+    "goal": "目標",
+    "stats": "統計",
+    "export": "書出"
+  },
+  "transactions": {
+    "title": "最近の取引",
+    "all": "すべて",
+    "empty": {
+      "title": "取引がありません",
+      "description": "最初の収入または支出を追加してください"
+    },
+    "addIncome": "収入を追加",
+    "addExpense": "支出を追加",
+    "today": "今日",
+    "yesterday": "昨日"
+  },
+  "goals": {
+    "title": "貯蓄目標",
+    "all": "すべて",
+    "new": "新しい目標",
+    "create": "目標を作成",
+    "addFunds": "追加",
+    "remaining": "残りの貯蓄額",
+    "fundAmount": "追加金額",
+    "completed": "目標達成！",
+    "progress": "{{percent}}% 完了",
+    "icon": "アイコン",
+    "name": "目標名",
+    "namePlaceholder": "例：新しいiPhone",
+    "targetAmount": "目標金額"
+  },
+  "stats": {
+    "title": "統計",
+    "incomes": "収入",
+    "expenses": "支出",
+    "byCategory": "カテゴリ別支出",
+    "noData": "今月の支出データがありません",
+    "ofTotal": "総支出の{{percent}}%"
+  },
+  "form": {
+    "amount": "金額",
+    "category": "カテゴリ",
+    "description": "説明（任意）",
+    "descriptionPlaceholder": "メモを追加..."
+  },
+  "categories": {
+    "expense": {
+      "food": "食費",
+      "transport": "交通費",
+      "entertainment": "娯楽",
+      "shopping": "買い物",
+      "health": "健康",
+      "utilities": "光熱費",
+      "education": "教育",
+      "other": "その他"
+    },
+    "income": {
+      "salary": "給料",
+      "freelance": "フリーランス",
+      "investments": "投資",
+      "gifts": "ギフト",
+      "other": "その他"
+    }
+  },
+  "toast": {
+    "exportSuccess": "CSVにエクスポートしました",
+    "exportError": "エクスポートする取引がありません"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "言語",
+    "theme": "テーマ",
+    "logout": "ログアウト"
+  },
+  "auth": {
+    "signIn": "サインイン",
+    "signInWithGoogle": "Googleでサインイン",
+    "signOut": "サインアウト",
+    "welcome": "コピマスターへようこそ",
+    "description": "スマートな個人財務トラッカー"
+  }
+}

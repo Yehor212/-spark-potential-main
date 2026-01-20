@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "KopiMaster",
+    "greeting": "Hallo! 👋"
+  },
+  "balance": {
+    "title": "Gesamtguthaben",
+    "income": "Einnahmen",
+    "expense": "Ausgaben"
+  },
+  "actions": {
+    "income": "Einnahmen",
+    "expense": "Ausgaben",
+    "goal": "Ziel",
+    "stats": "Statistik",
+    "export": "Export"
+  },
+  "transactions": {
+    "title": "Letzte Transaktionen",
+    "all": "Alle",
+    "empty": {
+      "title": "Noch keine Transaktionen",
+      "description": "Fügen Sie Ihre erste Einnahme oder Ausgabe hinzu"
+    },
+    "addIncome": "Einnahme hinzufügen",
+    "addExpense": "Ausgabe hinzufügen",
+    "today": "Heute",
+    "yesterday": "Gestern"
+  },
+  "goals": {
+    "title": "Sparziele",
+    "all": "Alle",
+    "new": "Neues Ziel",
+    "create": "Ziel erstellen",
+    "addFunds": "Einzahlen",
+    "remaining": "Noch zu sparen",
+    "fundAmount": "Einzahlungsbetrag",
+    "completed": "Ziel erreicht!",
+    "progress": "{{percent}}% abgeschlossen",
+    "icon": "Symbol",
+    "name": "Zielname",
+    "namePlaceholder": "Z.B.: Neues iPhone",
+    "targetAmount": "Zielbetrag"
+  },
+  "stats": {
+    "title": "Statistik",
+    "incomes": "Einnahmen",
+    "expenses": "Ausgaben",
+    "byCategory": "Ausgaben nach Kategorie",
+    "noData": "Keine Ausgabendaten für diesen Monat",
+    "ofTotal": "{{percent}}% der Gesamtausgaben"
+  },
+  "form": {
+    "amount": "Betrag",
+    "category": "Kategorie",
+    "description": "Beschreibung (optional)",
+    "descriptionPlaceholder": "Notiz hinzufügen..."
+  },
+  "categories": {
+    "expense": {
+      "food": "Essen",
+      "transport": "Transport",
+      "entertainment": "Unterhaltung",
+      "shopping": "Einkaufen",
+      "health": "Gesundheit",
+      "utilities": "Nebenkosten",
+      "education": "Bildung",
+      "other": "Sonstiges"
+    },
+    "income": {
+      "salary": "Gehalt",
+      "freelance": "Freiberuflich",
+      "investments": "Investitionen",
+      "gifts": "Geschenke",
+      "other": "Sonstiges"
+    }
+  },
+  "toast": {
+    "exportSuccess": "Transaktionen als CSV exportiert",
+    "exportError": "Keine Transaktionen zum Exportieren"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "language": "Sprache",
+    "theme": "Design",
+    "logout": "Abmelden"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signInWithGoogle": "Mit Google anmelden",
+    "signOut": "Abmelden",
+    "welcome": "Willkommen bei KopiMaster",
+    "description": "Intelligenter persönlicher Finanztracker"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "KopiMaster",
+    "greeting": "Hello! 👋"
+  },
+  "balance": {
+    "title": "Total Balance",
+    "income": "Income",
+    "expense": "Expense"
+  },
+  "actions": {
+    "income": "Income",
+    "expense": "Expense",
+    "goal": "Goal",
+    "stats": "Stats",
+    "export": "Export"
+  },
+  "transactions": {
+    "title": "Recent Transactions",
+    "all": "All",
+    "empty": {
+      "title": "No transactions yet",
+      "description": "Add your first income or expense"
+    },
+    "addIncome": "Add Income",
+    "addExpense": "Add Expense",
+    "today": "Today",
+    "yesterday": "Yesterday"
+  },
+  "goals": {
+    "title": "Savings Goals",
+    "all": "All",
+    "new": "New Goal",
+    "create": "Create Goal",
+    "addFunds": "Add Funds",
+    "remaining": "Remaining to save",
+    "fundAmount": "Amount to add",
+    "completed": "Goal achieved!",
+    "progress": "{{percent}}% completed",
+    "icon": "Icon",
+    "name": "Goal Name",
+    "namePlaceholder": "E.g.: New iPhone",
+    "targetAmount": "Target Amount"
+  },
+  "stats": {
+    "title": "Statistics",
+    "incomes": "Incomes",
+    "expenses": "Expenses",
+    "byCategory": "Expenses by Category",
+    "noData": "No expense data for this month",
+    "ofTotal": "{{percent}}% of total expenses"
+  },
+  "form": {
+    "amount": "Amount",
+    "category": "Category",
+    "description": "Description (optional)",
+    "descriptionPlaceholder": "Add a note..."
+  },
+  "categories": {
+    "expense": {
+      "food": "Food",
+      "transport": "Transport",
+      "entertainment": "Entertainment",
+      "shopping": "Shopping",
+      "health": "Health",
+      "utilities": "Utilities",
+      "education": "Education",
+      "other": "Other"
+    },
+    "income": {
+      "salary": "Salary",
+      "freelance": "Freelance",
+      "investments": "Investments",
+      "gifts": "Gifts",
+      "other": "Other"
+    }
+  },
+  "toast": {
+    "exportSuccess": "Transactions exported to CSV",
+    "exportError": "No transactions to export"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Log out"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signInWithGoogle": "Sign in with Google",
+    "signOut": "Sign Out",
+    "welcome": "Welcome to KopiMaster",
+    "description": "Smart personal finance tracker"
+  }
+}

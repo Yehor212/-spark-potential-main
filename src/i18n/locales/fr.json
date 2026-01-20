@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "KopiMaster",
+    "greeting": "Bonjour! 👋"
+  },
+  "balance": {
+    "title": "Solde Total",
+    "income": "Revenus",
+    "expense": "Dépenses"
+  },
+  "actions": {
+    "income": "Revenus",
+    "expense": "Dépenses",
+    "goal": "Objectif",
+    "stats": "Stats",
+    "export": "Exporter"
+  },
+  "transactions": {
+    "title": "Transactions Récentes",
+    "all": "Tout",
+    "empty": {
+      "title": "Pas encore de transactions",
+      "description": "Ajoutez votre premier revenu ou dépense"
+    },
+    "addIncome": "Ajouter un Revenu",
+    "addExpense": "Ajouter une Dépense",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier"
+  },
+  "goals": {
+    "title": "Objectifs d'Épargne",
+    "all": "Tout",
+    "new": "Nouvel Objectif",
+    "create": "Créer l'Objectif",
+    "addFunds": "Ajouter",
+    "remaining": "Reste à économiser",
+    "fundAmount": "Montant à ajouter",
+    "completed": "Objectif atteint!",
+    "progress": "{{percent}}% complété",
+    "icon": "Icône",
+    "name": "Nom de l'Objectif",
+    "namePlaceholder": "Ex: Nouvel iPhone",
+    "targetAmount": "Montant Cible"
+  },
+  "stats": {
+    "title": "Statistiques",
+    "incomes": "Revenus",
+    "expenses": "Dépenses",
+    "byCategory": "Dépenses par Catégorie",
+    "noData": "Aucune donnée de dépenses ce mois-ci",
+    "ofTotal": "{{percent}}% des dépenses totales"
+  },
+  "form": {
+    "amount": "Montant",
+    "category": "Catégorie",
+    "description": "Description (optionnel)",
+    "descriptionPlaceholder": "Ajouter une note..."
+  },
+  "categories": {
+    "expense": {
+      "food": "Alimentation",
+      "transport": "Transport",
+      "entertainment": "Loisirs",
+      "shopping": "Shopping",
+      "health": "Santé",
+      "utilities": "Services",
+      "education": "Éducation",
+      "other": "Autre"
+    },
+    "income": {
+      "salary": "Salaire",
+      "freelance": "Freelance",
+      "investments": "Investissements",
+      "gifts": "Cadeaux",
+      "other": "Autre"
+    }
+  },
+  "toast": {
+    "exportSuccess": "Transactions exportées en CSV",
+    "exportError": "Aucune transaction à exporter"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "language": "Langue",
+    "theme": "Thème",
+    "logout": "Déconnexion"
+  },
+  "auth": {
+    "signIn": "Connexion",
+    "signInWithGoogle": "Se connecter avec Google",
+    "signOut": "Déconnexion",
+    "welcome": "Bienvenue sur KopiMaster",
+    "description": "Gestionnaire de finances personnel intelligent"
+  }
+}

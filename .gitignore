@@ -1,0 +1,60 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables - NEVER COMMIT!
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env*.local
+
+# Secrets and keys
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+*.credential*
+*secret*
+api_keys.json
+
+# Supabase
+supabase/.branches
+supabase/.temp
+
+# OS files
+Thumbs.db
+*.tmp
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Build cache
+.cache/
+.parcel-cache/
+.turbo/

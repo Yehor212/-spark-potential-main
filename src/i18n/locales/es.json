@@ -1,0 +1,95 @@
+{
+  "app": {
+    "name": "KopiMaster",
+    "greeting": "¡Hola! 👋"
+  },
+  "balance": {
+    "title": "Saldo Total",
+    "income": "Ingresos",
+    "expense": "Gastos"
+  },
+  "actions": {
+    "income": "Ingreso",
+    "expense": "Gasto",
+    "goal": "Meta",
+    "stats": "Estadísticas",
+    "export": "Exportar"
+  },
+  "transactions": {
+    "title": "Transacciones Recientes",
+    "all": "Todas",
+    "empty": {
+      "title": "Aún no hay transacciones",
+      "description": "Agrega tu primer ingreso o gasto"
+    },
+    "addIncome": "Agregar Ingreso",
+    "addExpense": "Agregar Gasto",
+    "today": "Hoy",
+    "yesterday": "Ayer"
+  },
+  "goals": {
+    "title": "Metas de Ahorro",
+    "all": "Todas",
+    "new": "Nueva Meta",
+    "create": "Crear Meta",
+    "addFunds": "Agregar",
+    "remaining": "Falta por ahorrar",
+    "fundAmount": "Cantidad a agregar",
+    "completed": "¡Meta alcanzada!",
+    "progress": "{{percent}}% completado",
+    "icon": "Icono",
+    "name": "Nombre de la Meta",
+    "namePlaceholder": "Ej: Nuevo iPhone",
+    "targetAmount": "Monto Objetivo"
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "incomes": "Ingresos",
+    "expenses": "Gastos",
+    "byCategory": "Gastos por Categoría",
+    "noData": "Sin datos de gastos este mes",
+    "ofTotal": "{{percent}}% del total de gastos"
+  },
+  "form": {
+    "amount": "Cantidad",
+    "category": "Categoría",
+    "description": "Descripción (opcional)",
+    "descriptionPlaceholder": "Agregar una nota..."
+  },
+  "categories": {
+    "expense": {
+      "food": "Comida",
+      "transport": "Transporte",
+      "entertainment": "Entretenimiento",
+      "shopping": "Compras",
+      "health": "Salud",
+      "utilities": "Servicios",
+      "education": "Educación",
+      "other": "Otro"
+    },
+    "income": {
+      "salary": "Salario",
+      "freelance": "Freelance",
+      "investments": "Inversiones",
+      "gifts": "Regalos",
+      "other": "Otro"
+    }
+  },
+  "toast": {
+    "exportSuccess": "Transacciones exportadas a CSV",
+    "exportError": "No hay transacciones para exportar"
+  },
+  "settings": {
+    "title": "Configuración",
+    "language": "Idioma",
+    "theme": "Tema",
+    "logout": "Cerrar sesión"
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signInWithGoogle": "Iniciar sesión con Google",
+    "signOut": "Cerrar Sesión",
+    "welcome": "Bienvenido a KopiMaster",
+    "description": "Rastreador de finanzas personal inteligente"
+  }
+}
