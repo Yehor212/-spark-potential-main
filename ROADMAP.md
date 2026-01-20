@@ -108,21 +108,28 @@ Transform KopiMaster into a full-featured personal finance platform with bank in
 
 ---
 
-### Phase 4: Budgets & Recurring
+### Phase 4: Budgets & Recurring ✅ COMPLETED
 
-**Files to create:**
-- `src/components/budgets/`
-- `src/components/recurring/`
-- `src/pages/Budgets.tsx`
-- `src/pages/Recurring.tsx`
+**Files created:**
+- `src/stores/useRecurringStore.ts` - Recurring transactions state
+- `src/components/budgets/BudgetOverview.tsx` - Main budget management
+- `src/components/budgets/BudgetProgressBar.tsx` - Visual progress bars
+- `src/components/budgets/BudgetCard.tsx` - Individual budget display
+- `src/components/budgets/AddBudgetModal.tsx` - Create/edit budgets
+- `src/components/recurring/RecurringList.tsx` - Recurring transactions list
+- `src/components/recurring/RecurringCard.tsx` - Individual recurring item
+- `src/components/recurring/AddRecurringModal.tsx` - Create/edit recurring
+- `src/services/alerts/BudgetAlerts.ts` - Budget monitoring & notifications
 
-**Features:**
-- [ ] Monthly budgets per category
-- [ ] Budget progress bars
-- [ ] Alerts at 80%, 100%
-- [ ] Recurring transaction templates
-- [ ] Auto-creation on schedule
-- [ ] Reminders (push notifications)
+**Features completed:**
+- [x] Monthly budgets per category
+- [x] Budget progress bars with color-coded states
+- [x] Alerts at configurable threshold (default 80%) and 100%
+- [x] Recurring transaction templates (income/expense)
+- [x] Auto-creation on schedule (daily/weekly/biweekly/monthly/yearly)
+- [x] Reminder system with configurable days before due
+- [x] Budget health summary with healthy/warning/exceeded counts
+- [x] i18n translations for EN/UK
 
 ---
 
@@ -189,10 +196,15 @@ src/components/
 │   ├── BankConnectionsList.tsx
 │   ├── ConnectBankModal.tsx
 │   └── SyncStatus.tsx
-├── budgets/           📋 TODO
+├── budgets/           ✅ DONE
 │   ├── BudgetOverview.tsx
 │   ├── BudgetProgressBar.tsx
+│   ├── BudgetCard.tsx
 │   └── AddBudgetModal.tsx
+├── recurring/         ✅ DONE
+│   ├── RecurringList.tsx
+│   ├── RecurringCard.tsx
+│   └── AddRecurringModal.tsx
 ├── analytics/         📋 TODO
 │   ├── ExpensesPieChart.tsx
 │   ├── MonthlyTrendsChart.tsx
@@ -218,6 +230,7 @@ src/stores/
 ├── useAccountsStore.ts        ✅ Multiple accounts
 ├── useTransactionsStore.ts    ✅ Transactions + sync
 ├── useBudgetsStore.ts         ✅ Budget management
+├── useRecurringStore.ts       ✅ Recurring transactions
 ├── useGoalsStore.ts           ✅ Savings goals
 ├── useGamificationStore.ts    ✅ XP, levels, achievements
 ├── useSyncStore.ts            ✅ Offline sync queue
@@ -288,7 +301,7 @@ User Action → Zustand Store → IndexedDB (immediate)
 | Phase 1 | ✅ Done | Foundation - Accounts, Stores, IndexedDB |
 | Phase 2 | ✅ Done | PWA & Offline |
 | Phase 3 | ✅ Done | Bank Integrations (Monobank, Nordigen, Plaid) |
-| Phase 4 | 🔜 Next | Budgets & Recurring |
-| Phase 5 | 📋 Todo | Analytics & Charts |
+| Phase 4 | ✅ Done | Budgets & Recurring |
+| Phase 5 | 🔜 Next | Analytics & Charts |
 | Phase 6 | 📋 Todo | Gamification & Social |
 | Phase 7 | 📋 Todo | CTA & Polish |
